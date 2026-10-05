@@ -1416,3 +1416,361 @@ body[data-page='blog-details.html'] .sidebar-search {
 body[data-page='blog-details.html'] .article-body[hidden] {
   display: none;
 }
+
+/* Targeted screenshot fixes: Pricing FAQ and Home 1 / Home 2 alignment. */
+body[data-page='pricing.html'] .faq-list {
+  width: 100%;
+  max-width: none;
+}
+@media (min-width: 640px) {
+  body[data-page='home-2.html'] .pairing-layout {
+    align-items: stretch;
+  }
+  body[data-page='home-2.html'] .pairing-layout > img {
+    height: 0;
+    min-height: 100%;
+    max-height: none;
+    align-self: stretch;
+    object-fit: cover;
+  }
+}
+@media (min-width: 640px) and (max-width: 1199px) {
+  body[data-page='index.html'] .values-grid {
+    grid-template-rows: auto auto auto;
+    row-gap: 0;
+    align-items: stretch;
+  }
+  body[data-page='index.html'] .values-grid > article {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    align-content: start;
+    text-align: start;
+  }
+  body[data-page='index.html'] .values-grid h3 {
+    min-block-size: 2.6em;
+    margin-bottom: 16px;
+  }
+  body[data-page='index.html'] .featured-product > div {
+    min-width: 0;
+  }
+  body[data-page='index.html'] .featured-product > div:last-child {
+    text-align: start;
+  }
+  body[data-page='home-2.html'] .harvest-steps {
+    grid-template-rows: auto auto;
+    row-gap: 0;
+    align-items: stretch;
+  }
+  body[data-page='home-2.html'] .harvest-steps > li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+    gap: 0 12px;
+    text-align: start;
+  }
+  body[data-page='home-2.html'] .harvest-steps > li > div {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+    min-width: 0;
+  }
+  body[data-page='home-2.html'] .harvest-steps h3 {
+    min-block-size: 2.6em;
+    margin-bottom: 16px;
+  }
+  body[data-page='home-2.html'] .harvest-steps p {
+    margin-bottom: 0;
+  }
+  body[data-page='home-2.html'] .newsletter {
+    align-items: start;
+  }
+  body[data-page='home-2.html'] .newsletter > div,
+  body[data-page='home-2.html'] .newsletter-form {
+    min-width: 0;
+    text-align: start;
+  }
+}
+
+/* Follow-up screenshot fixes: Product list, seasons and gifting. */
+@media (max-width: 1199px) {
+  body[data-page='products.html'] .product-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body[data-page='products.html'] .product-grid > .product-card,
+  body[data-page='products.html'] .product-grid > .product-card:nth-child(3n of :not([hidden])) {
+    grid-column: 1;
+    width: 100%;
+    justify-self: stretch;
+    min-width: 0;
+  }
+}
+@media (min-width: 640px) and (max-width: 1199px) {
+  body[data-page='home-2.html'] .season-calendar {
+    grid-template-rows: auto auto 1fr auto;
+    row-gap: 12px;
+  }
+  body[data-page='home-2.html'] .season-calendar > article {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    align-items: start;
+    text-align: start;
+  }
+  body[data-page='home-2.html'] .season-calendar h3 {
+    min-block-size: 2.6em;
+    margin-bottom: 0;
+  }
+  body[data-page='home-2.html'] .season-calendar p {
+    margin-bottom: 0;
+  }
+  body[data-page='home-2.html'] .season-calendar .text-link {
+    align-self: end;
+    margin-top: 0;
+  }
+}
+@media (min-width: 768px) {
+  body[data-page='gifting.html'] .gift-builder-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  body[data-page='gifting.html'] .gift-builder-layout > div > h2 br {
+    display: none;
+  }
+  body[data-page='gifting.html'] .gift-builder-layout > div > p:last-child {
+    margin-bottom: 0;
+    max-width: none;
+  }
+  body[data-page='gifting.html'] .gift-builder {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 20px 28px;
+    align-items: start;
+  }
+  body[data-page='gifting.html'] .gift-builder > fieldset,
+  body[data-page='gifting.html'] .gift-builder > .form-field {
+    margin-bottom: 0;
+    min-width: 0;
+  }
+  body[data-page='gifting.html'] .gift-builder textarea {
+    min-height: 216px;
+  }
+  body[data-page='gifting.html'] .gift-builder > button {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+  body[data-page='gifting.html'] .gift-builder > .form-status {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  body[data-page='gifting.html'] .packaging-grid {
+    align-items: stretch;
+  }
+  body[data-page='gifting.html'] .packaging-grid > div:first-child {
+    position: relative;
+    min-height: 280px;
+  }
+  body[data-page='gifting.html'] .packaging-grid img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+  }
+  body[data-page='gifting.html'] .packaging-grid > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+  body[data-page='gifting.html'] .packaging-grid .check-list {
+    margin-bottom: 0;
+  }
+}
+
+/* Bulk format and process text alignment at tablet widths. */
+@media (min-width: 640px) and (max-width: 1199px) {
+  body[data-page='bulk-orders.html'] .format-grid {
+    grid-template-rows: auto auto 1fr;
+    row-gap: 12px;
+  }
+  body[data-page='bulk-orders.html'] .format-grid > article {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    align-items: start;
+    text-align: start;
+  }
+  body[data-page='bulk-orders.html'] .format-grid h3 {
+    min-block-size: 2.6em;
+    margin: 0;
+  }
+  body[data-page='bulk-orders.html'] .format-grid p,
+  body[data-page='bulk-orders.html'] .format-size {
+    margin-bottom: 0;
+  }
+  body[data-page='bulk-orders.html'] .process-list {
+    grid-template-rows: auto auto auto;
+    row-gap: 12px;
+  }
+  body[data-page='bulk-orders.html'] .process-list > li {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    align-items: start;
+    text-align: start;
+  }
+  body[data-page='bulk-orders.html'] .process-list > li > div {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+  }
+  body[data-page='bulk-orders.html'] .process-list h3 {
+    min-block-size: 2.6em;
+    margin-bottom: 0;
+  }
+}
+/* Contact information and form share the full width, avoiding a vacant column. */
+@media (min-width: 640px) {
+  body[data-page='contact.html'] .contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+  body[data-page='contact.html'] .contact-layout > div > h2 br {
+    display: none;
+  }
+  body[data-page='contact.html'] .contact-layout > div > p {
+    max-width: none;
+  }
+  body[data-page='contact.html'] .contact-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 24px;
+    margin-block: 24px;
+  }
+  body[data-page='contact.html'] .contact-details dt {
+    margin: 0;
+  }
+  body[data-page='contact.html'] .contact-details dd {
+    margin: 0 0 16px;
+    overflow-wrap: anywhere;
+  }
+  body[data-page='contact.html'] .contact-details > :nth-child(1) { grid-column: 1; grid-row: 1; }
+  body[data-page='contact.html'] .contact-details > :nth-child(2) { grid-column: 1; grid-row: 2; }
+  body[data-page='contact.html'] .contact-details > :nth-child(3) { grid-column: 2; grid-row: 1; }
+  body[data-page='contact.html'] .contact-details > :nth-child(4) { grid-column: 2; grid-row: 2; }
+  body[data-page='contact.html'] .contact-details > :nth-child(5) { grid-column: 1; grid-row: 3; }
+  body[data-page='contact.html'] .contact-details > :nth-child(6) { grid-column: 1; grid-row: 4; }
+  body[data-page='contact.html'] .contact-details > :nth-child(7) { grid-column: 2; grid-row: 3; }
+  body[data-page='contact.html'] .contact-details > :nth-child(8) { grid-column: 2; grid-row: 4; }
+  body[data-page='contact.html'] .enquiry-form,
+  body[data-page='contact.html'] .form-grid {
+    min-width: 0;
+    width: 100%;
+  }
+  body[data-page='contact.html'] .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  body[data-page='contact.html'] .contact-details {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  body[data-page='contact.html'] .contact-details > :nth-child(5) { grid-column: 3; grid-row: 1; }
+  body[data-page='contact.html'] .contact-details > :nth-child(6) { grid-column: 3; grid-row: 2; }
+  body[data-page='contact.html'] .contact-details > :nth-child(7) { grid-column: 4; grid-row: 1; }
+  body[data-page='contact.html'] .contact-details > :nth-child(8) { grid-column: 4; grid-row: 2; }
+}
+
+/* Pantry Bundles FAQ uses the full content width, including expanded answers. */
+body[data-page='pricing.html'] .faq-list,
+body[data-page='pricing.html'] .faq-list details > p {
+  width: 100%;
+  max-width: none;
+}
+@media (min-width: 640px) {
+  body[data-page='contact.html'] .form-field:has(#field-subject) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Targeted follow-up: gift note, care image, last journal card, product gallery. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  body[data-page='gifting.html'] .gift-builder {
+    align-items: stretch;
+  }
+  body[data-page='gifting.html'] .gift-builder > .form-field {
+    display: flex;
+    flex-direction: column;
+  }
+  body[data-page='gifting.html'] .gift-builder textarea {
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+  }
+}
+@media (min-width: 640px) {
+  body[data-page='home-2.html'] .pantry-care {
+    align-items: stretch;
+  }
+  body[data-page='home-2.html'] .pantry-care > img {
+    height: 0;
+    min-height: 100%;
+    max-height: none;
+    align-self: stretch;
+    object-fit: cover;
+  }
+  body[data-page='home-2.html'] .pantry-care > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+  }
+  body[data-page='product-details.html'] .detail-top {
+    align-items: stretch;
+  }
+  body[data-page='product-details.html'] .product-gallery {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    min-width: 0;
+  }
+  body[data-page='product-details.html'] .gallery-main {
+    position: relative;
+    min-height: 320px;
+  }
+  body[data-page='product-details.html'] .gallery-main img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+}
+@media (min-width: 640px) and (max-width: 1199px) {
+  .journal-grid > .journal-card:nth-child(odd of :not([hidden])):nth-last-child(1 of :not([hidden])) {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+    display: flex;
+    flex-direction: column;
+  }
+  .journal-grid > .journal-card:nth-child(odd of :not([hidden])):nth-last-child(1 of :not([hidden])) > a {
+    width: 100%;
+  }
+  .journal-grid > .journal-card:nth-child(odd of :not([hidden])):nth-last-child(1 of :not([hidden])) img {
+    width: 100%;
+    height: 280px;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+  .journal-grid > .journal-card:nth-child(odd of :not([hidden])):nth-last-child(1 of :not([hidden])) > div {
+    width: 100%;
+    min-width: 0;
+    padding-inline: 0;
+  }
+}
